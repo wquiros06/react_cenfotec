@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './reloj.css';
+import Mensaje from './Mensajes';
 
 //Ejemplo de Estados
 class Reloj extends Component{
@@ -10,18 +11,11 @@ class Reloj extends Component{
             mostrar: true
         };
         this.handleClick = this.handleClick.bind(this);
-        this.mostrar = this.mostrar.bind(this);
     }
 
     handleClick(){
         this.setState({
-            mostrar: false   
-        });
-    }
-
-    mostrar(){
-        this.setState({
-            mostrar: true   
+            mostrar: this.state.mostrar ? false : true   
         });
     }
 
@@ -50,12 +44,12 @@ class Reloj extends Component{
             <div>
                 <h1>Hola.</h1>
                 <h2>Son las {this.state.date.toLocaleTimeString()}
-                <img src="https://cdn1.iconfinder.com/data/icons/photos-set/24/5-secound-128.png" className="reloj-img" alt="reloj" /><br/>
                 </h2>
-                
-                <button onClick={this.handleClick}>Ocultar</button>
+                {this.state.mostrar ? <><img src="https://cdn1.iconfinder.com/data/icons/photos-set/24/5-secound-128.png" className="reloj-img" alt="reloj" /><Mensaje mensaje="con relojito"/></>: <Mensaje mensaje="sin relojito"/>}                    
+                <button onClick={this.handleClick}>
+                    {this.state.mostrar ? "Ocultar":"Mostrar"}
+                </button>
 
-                <button onClick={this.mostrar}>Mostrar</button>
             </div>
         );
     }

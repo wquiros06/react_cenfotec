@@ -1,7 +1,7 @@
 .reloj-img {
-    animation: reloj-img-spin infinite 60s linear;
-    height: 15vmin;
-    width: 15vmin;
+    animation: reloj-img-spin infinite 1s linear;
+    height: 8vmin;
+    width: 8vmin;
     margin: -1px auto;
   }
 
