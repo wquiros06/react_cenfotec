@@ -1,0 +1,22 @@
+.tarjeta-comentario{
+    background-color: #61dafb;
+}
+
+/*.comentario-avatar {
+    animation: comentario-avatar-spin infinite 20s linear;    
+}*/
+
+.contenedor-avatar{
+    display: flex;
+    flex-direction: column;
+}
+
+
+  @keyframes comentario-avatar-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

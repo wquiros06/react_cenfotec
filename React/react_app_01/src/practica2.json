@@ -1,0 +1,11 @@
+[
+  {
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend risus ex, porta accumsan justo varius ultrices. Nam ante nunc, porta at erat eu, posuere congue mauris. Praesent laoreet, arcu non fermentum lacinia, tellus augue maximus metus, non condimentum lorem orci ac massa. Curabitur maximus gravida mi ut pretium. Mauris vel lectus nec lorem mattis pellentesque a a lacus. Mauris orci est, lobortis et justo vel, vulputate consequat sapien.",
+    "title": "My comment 1",
+    "date": "12/12/2012",
+    "author": {
+      "avatarUrl": "https://placekitten.com/g/64/64",
+      "name": "Fulano"
+    }
+  }
+]
