@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import * as serviceWorker from './serviceWorker';
+
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 //const nombre = "Fulanito"
@@ -31,8 +32,6 @@ let bienvenida = usuario => {
     return <h1>Hola extraño</h1>
 }
 
-
-
 //muestra el usuario
 //ReactDOM.render(bienvenida(user), document.getElementById('root'));
 
@@ -55,12 +54,77 @@ usuario ? <h1>Hola, {formatName(usuario)}!</h1> :
 function tick() {
     const element =(
         <div>
-            <h1>Hola</h1>
+            <h1>Hola!!!</h1>
             <h2>Son las {new Date().toLocaleTimeString()}</h2>
         </div>
     );
     ReactDOM.render(element, document.getElementById('root'));    
 }
-setInterval(tick,1000);
+//setInterval(tick,1000);
+
+function Welcome(props){
+    return <h1>Hola, {props.name}</h1>;
+}
+
+function App(){
+    return(
+        <div>
+            <Welcome name="Sara"/>
+            <Welcome name="Cahal"/>
+            <Welcome name="Edite"/>
+        </div>
+    );
+}
+
+
+//Mostrar un componente
+/*ReactDOM.render(
+    <App/>,
+    document.getElementById("root")
+)*/
+
+let usuarios =[
+    {
+        nombre: "Andrews Morgan",
+        salario: "2160292.27",
+        renta: "144193.84"
+    },
+    {
+        nombre: "Autumn Holland",
+        salario: "1218732.48",
+        renta: "2959.87"
+    }
+]
+
+function UsuarioActivoConRenta(props){
+    return <div style={{display: 'flex', justifyContent: 'space-around', flexDirection:"row"}}>
+                <div> Nombre: {props.nombre} </div>
+                <div> Salario en colones: {props.salario} </div>
+                <div> Renta: {props.renta} </div>
+           </div>;
+}
+
+function MostrarUsuarios(props){
+    return(
+        <>
+            <h1>Rentas</h1>
+            {props.data.map(usuario => {
+                return(
+                    <UsuarioActivoConRenta
+                        Key={usuario.nombre}
+                        nombre={usuario.nombre}
+                        salario={usuario.salario}
+                        renta={usuario.renta} 
+                    />
+                );
+            })}            
+        </>
+    )
+}
+
+ReactDOM.render(
+    <MostrarUsuarios data={usuarios}/>,
+    document.getElementById("root")
+)
 
 serviceWorker.unregister();
