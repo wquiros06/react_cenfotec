@@ -10,14 +10,12 @@ class Comentarios extends Component{
                     {
                         data.map((comentario,i) =>{
                             return(
-                                <div  Key={i} className="tarjeta-comentario">
+                                <div Key={i} className="tarjeta-comentario">
                                     <CargarAvatar 
-                                    Key={comentario.author.name}
                                     Usuario={comentario.author.name}
                                     AvatarURL={comentario.author.avatarUrl}
                                     />
                                     <CargarComentario 
-                                    Key={comentario.title}
                                     Titulo={comentario.title}
                                     Fecha={comentario.date}
                                     Comentario={comentario.text}
@@ -35,7 +33,7 @@ class Comentarios extends Component{
 function CargarAvatar(props){
     return <div className="contenedor-avatar">
                 <div>
-                    <img id={props.Key} src={props.AvatarURL} alt={props.Usuario} /><br/>
+                    <img src={props.AvatarURL} alt={props.Usuario} /><br/>
                 </div>
                 <div className="titulo-avatar">
                     {props.Usuario}
