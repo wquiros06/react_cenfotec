@@ -2,65 +2,56 @@ import React, { Component } from 'react';
 import './comentarios.css';
 import data from './practica2.json';
 
-/*let comentarios = require("./practica2.json");
-
-comentarios.forEach(
-    (c) => {
-        console.log(c);
-    }
-);
-*/
-
 
 class Comentarios extends Component{
     render() {
         return(
-            <div className="tarjeta-comentario">
-                {
-                    data.map(comentario =>{
-                        return(
-                            <CargarAvatar 
-                            Key={comentario.author.avatarUrl}
-                            AvatarURL={comentario.author.avatarUrl}
-                            />
-                        );
-                    })
-                }
-
-                {
-                    data.map(comentario =>{
-                        return (
-                            <CargarComentario 
-                            Key={comentario.title}
-                            Titulo={comentario.title}
-                            Fecha={comentario.date}
-                            Comentario={comentario.text}
-                            Autor={comentario.author.name}
-                            />
-                        );
-                    })
-                }
-            </div>       
+                <div>
+                    {
+                        data.map((comentario,i) =>{
+                            return(
+                                <div  Key={i} className="tarjeta-comentario">
+                                    <CargarAvatar 
+                                    Key={comentario.author.name}
+                                    Usuario={comentario.author.name}
+                                    AvatarURL={comentario.author.avatarUrl}
+                                    />
+                                    <CargarComentario 
+                                    Key={comentario.title}
+                                    Titulo={comentario.title}
+                                    Fecha={comentario.date}
+                                    Comentario={comentario.text}
+                                    Autor={comentario.author.name}
+                                    />
+                                </div>
+                            );
+                        })
+                    }                    
+                </div> 
         );
     }
 }
 
 function CargarAvatar(props){
-    return <div>
-            <img src={props.AvatarURL} className="comentario-avatar" alt="avatar" /><br/>
-            Usuario
-           </div>
+    return <div className="contenedor-avatar">
+                <div>
+                    <img id={props.Key} src={props.AvatarURL} alt={props.Usuario} /><br/>
+                </div>
+                <div className="titulo-avatar">
+                    {props.Usuario}
+                </div>
+            </div>
 }
 
 function CargarComentario(props){
-    return <div style={{display: 'flex', justifyContent: 'space-around', flexDirection:"row"}}>                
-                <div>
-                    Titulo: {props.Titulo}
+    return <div className="contenedor-comentario">                
+                <div className="encabezado-comentario">
+                    {props.Titulo}
                 </div>
-                <div>
-                    Fecha: {props.Fecha}
+                <div className="fechas">
+                    {props.Fecha}
                 </div>
-                <div>
+                <div className="texto-comentario">
                     {props.Comentario}
                 </div>
            </div>;
