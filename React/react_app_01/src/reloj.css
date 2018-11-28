@@ -1,0 +1,18 @@
+.reloj-img {
+    animation: reloj-img-spin infinite 60s linear;
+    height: 15vmin;
+    width: 15vmin;
+    margin: -1px auto;
+  }
+
+  
+@keyframes reloj-img-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*http://kinematicswb.sourceforge.net/tutorials/clock_1.1.png*/
