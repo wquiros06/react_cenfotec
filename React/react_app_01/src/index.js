@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import Main from './contenedores/main';
 
 ReactDOM.render(
-    <Main isLoggedIn={false}/>,
+    <Main/>,
      document.getElementById('root'));
 
 serviceWorker.unregister();
