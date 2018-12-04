@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App1 from './App';
-import Comentarios from './Comentarios';
+import Comentarios from './Practica_Comentarios/Comentarios';
 import * as serviceWorker from './serviceWorker';
 
 

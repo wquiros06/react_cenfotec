@@ -5,6 +5,8 @@ class Formulario extends Component {
     constructor(props) {
       super(props);
 
+      console.log(props);
+
       this.handleChangeNombre = this.handleChangeNombre.bind(this);
       this.handleChangeEdad = this.handleChangeEdad.bind(this);
     }
@@ -13,7 +15,7 @@ class Formulario extends Component {
       this.props.onFormularioNombreChange(event.target.value);
     }
 
-    handleChangeEdad(event){
+    handleChangeEdad(event) {
       this.props.onFormularioEdadChange(event.target.value);
     }
   

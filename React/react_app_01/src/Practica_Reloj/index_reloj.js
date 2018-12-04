@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import Comentarios from './Comentarios'; //Practica 2
-import * as serviceWorker from './serviceWorker';
-import Reloj from './Reloj';
+import * as serviceWorker from '../serviceWorker';
+import Reloj from '../Practica_Reloj/Reloj';
 
 //Versión 1 de reloj
 /*

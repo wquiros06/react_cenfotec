@@ -1,0 +1,20 @@
+[
+    {
+        "idTope": "0",
+        "piso":"0",
+        "techo":"799000",
+        "porcentaje":"0"
+    },
+    {
+        "idTope": "1",
+        "piso":"799000",
+        "techo":"1199000",
+        "porcentaje":"0.10"
+    },
+    {
+        "idTope": "2",
+        "piso":"1199000",
+        "techo": "10000000",
+        "porcentaje":"0.15"
+    }
+]

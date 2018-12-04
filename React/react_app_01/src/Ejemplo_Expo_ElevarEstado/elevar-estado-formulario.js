@@ -7,10 +7,10 @@ class ElevarEstadoFormularios extends Component {
 
       this.handleNombreChange = this.handleNombreChange.bind(this);
       this.handleEdadChange = this.handleEdadChange.bind(this);
-      this.state = {nombre: '', edad: 0};
+      this.state = {nombre: '', edad: ''};
     }
   
-    handleNombreChange(nombre) {
+    handleNombreChange(nombre) { 
       this.setState({nombre: nombre});
     }
   
@@ -21,14 +21,16 @@ class ElevarEstadoFormularios extends Component {
     render() {
   
       return (
-        <div>
+        <div style={{display:'flex',flexDirection:'row'}}>
           <Formulario
             nombre={this.state.nombre}
             edad={this.state.edad}
-            onFormularioNombreChange={this.handleNombreChange} />
+            onFormularioNombreChange={this.handleNombreChange}
+            onFormularioEdadChange={this.handleEdadChange} />
           <Formulario
             nombre={this.state.nombre}
             edad={this.state.edad}
+            onFormularioNombreChange={this.handleNombreChange}
             onFormularioEdadChange={this.handleEdadChange} />
         </div>
       );
