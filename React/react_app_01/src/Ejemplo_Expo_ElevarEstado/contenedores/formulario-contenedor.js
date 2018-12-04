@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
-import Formulario from "./formulario";
+import Formulario from "../componentes/formulario-componente";
 
-class ElevarEstadoFormularios extends Component {
+class Formularios extends Component {
     constructor(props) {
       super(props);
 
-      this.handleNombreChange = this.handleNombreChange.bind(this);
-      this.handleEdadChange = this.handleEdadChange.bind(this);
-      this.state = {nombre: '', edad: ''};
+      //this.handleNombreChange = this.handleNombreChange.bind(this);
+      //this.handleEdadChange = this.handleEdadChange.bind(this);
+      this.state = {nombre: '', 
+                    edad: ''};
     }
   
+    handleNombreChange = (nombre) => { 
+      this.setState({nombre: nombre});
+    }
+
+    handleEdadChange = (edad) => {
+      this.setState({edad: edad});
+    }
+
+    /*
     handleNombreChange(nombre) { 
       this.setState({nombre: nombre});
     }
@@ -17,11 +27,12 @@ class ElevarEstadoFormularios extends Component {
     handleEdadChange(edad) {
       this.setState({edad: edad});
     }
+    */
   
     render() {
   
       return (
-        <div style={{display:'flex',flexDirection:'row'}}>
+        <div>
           <Formulario
             nombre={this.state.nombre}
             edad={this.state.edad}
@@ -37,4 +48,4 @@ class ElevarEstadoFormularios extends Component {
     }
   }
   
-  export default ElevarEstadoFormularios;
+  export default Formularios;

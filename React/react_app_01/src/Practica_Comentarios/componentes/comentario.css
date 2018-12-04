@@ -1,0 +1,21 @@
+.contenedor-comentario{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 1em;
+  }
+  
+  .encabezado-comentario{
+    color:#282c34;
+    font-weight: bold;
+  }
+  
+  .fechas{
+    font-size: 11px;
+  }
+  
+  .texto-comentario{
+    border-top: solid .5px;
+    border-top-style: double;
+    margin-top: .5em;
+  }

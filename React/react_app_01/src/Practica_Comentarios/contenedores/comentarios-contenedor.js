@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './comentarios.css';
-import data from './practica2.json';
-
+import '../comentarios.css';
+import data from '../practica2.json';
+import CargarAvatar from "../componentes/avatar-componente";
+import CargarComentario from "../componentes/comentario-componente"
 
 class Comentarios extends Component{
     render() {
@@ -30,6 +31,7 @@ class Comentarios extends Component{
     }
 }
 
+/*
 function CargarAvatar(props){
     return <div className="contenedor-avatar">
                 <div>
@@ -40,7 +42,9 @@ function CargarAvatar(props){
                 </div>
             </div>
 }
+*/
 
+/*
 function CargarComentario(props){
     return <div className="contenedor-comentario">                
                 <div className="encabezado-comentario">
@@ -54,6 +58,7 @@ function CargarComentario(props){
                 </div>
            </div>;
 }
+*/
 
 
 export default Comentarios;

@@ -1,23 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React, { Component } from 'react';
 import './menu.css';
-import * as serviceWorker from './serviceWorker';
 import {
     Route,
     NavLink,
     BrowserRouter as Router,
     Switch,
   } from 'react-router-dom'
-//import Main from './contenedores/main';
-//import App from "./App"
-//import Comentarios from "./Practica_Comentarios/contenedores/comentarios-contenedor"
-//import Formularios from "./Ejemplo_Expo_ElevarEstado/contenedores/formulario-contenedor"
-//import Notfound from './notfound'
-import Routing from "./menu"
+import App from "./App"
+import Comentarios from "./Practica_Comentarios/contenedores/comentarios-contenedor"
+import Formularios from "./Ejemplo_Expo_ElevarEstado/contenedores/formulario-contenedor"
+import Notfound from './notfound'
 
-/*
-const routing = (
+
+const Routing = (
     <Router>
         <div>
             <ul>
@@ -28,7 +23,7 @@ const routing = (
                     <NavLink actvieClassName="active" to="/comentarios">Comentarios</NavLink>
                 </li>
                 <li>
-                <NavLink actvieClassName="active" to="/formularios">Formularios</NavLink>
+                    <NavLink actvieClassName="active" to="/formularios">Formularios</NavLink>
                 </li>
             </ul>
             <Switch>
@@ -40,10 +35,5 @@ const routing = (
         </div>
     </Router>
 )
-*/
 
-ReactDOM.render(
-    Routing,
-    document.getElementById('root'));
-
-serviceWorker.unregister();
+export default Routing;
